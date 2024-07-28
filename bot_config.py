@@ -1,0 +1,3 @@
+BOT_TOKEN = "7283406563:AAHCFwaFyn8ORSP0T8j1fhENi-UBwXnfOVY"
+BOT_URL = "https://t.me/notkoinuzbot"
+ADMIN = 2046978075
