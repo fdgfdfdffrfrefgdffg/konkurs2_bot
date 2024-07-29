@@ -40,7 +40,7 @@ async def get_stat(message: Message):
     for i in stat:
         user = data.get_user(i[0])
         if user and user.status == 1:
-            text += f"<tr><td>{r}</td><td>{user.name}</td><td>{user.phone}</td><td>{i[1] * 2}<td>"
+            text += f"<tr><td>{r}</td><td>{user.name}</td><td>{user.phone}</td><td>{i[1]}<td>"
             r += 1
     text += """
         </tbody>

@@ -21,11 +21,11 @@ async def answer_task(message: Message):
     await message.answer_photo(photo=FSInputFile(image_path), caption=post_text, parse_mode="HTML")
 
     text = f"✅ Vazifa:\n\n"
-    text += "Ushbu postni do'stlaringizga va guruhlarga ulashing va har bir do'stingiz uchun 2 dona Notcoin qo'lga kiriting!" 
+    text += "Ushbu postni do'stlaringizga va guruhlarga ulashing va har bir do'stingiz uchun 1 dona Notcoin qo'lga kiriting!" 
     await message.answer(text)
 
 async def answer_balans(message: Message):
     balans = len(data.get_ref_count(message.from_user.id))
     user = data.get_user(message.from_user.id)
-    text = F"SIZNING MA'LUMOTLARINGIZ:\n\nIsm-familya: {user.name}\nBalans: {balans * 2} Notcoin\nTelefon raqam: {user.phone}\n\n1 Notcoin - 100 UZS"
+    text = F"SIZNING MA'LUMOTLARINGIZ:\n\nIsm-familya: {user.name}\nBalans: {balans} Notcoin\nTelefon raqam: {user.phone}\n\n1 Notcoin - 500 UZS"
     await message.answer(text, reply_markup=iBtns.withdraw_btn(message.from_user.id))

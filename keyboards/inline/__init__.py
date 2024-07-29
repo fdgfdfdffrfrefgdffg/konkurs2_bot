@@ -29,5 +29,5 @@ async def channels_list_btn(channels, bot: Bot):
 
 def withdraw_btn(user_id):
      markup = InlineKeyboardBuilder()
-     markup.button(text="💰 NotCoinni yechib olish", callback_data=f"withdraw:{user_id}")
+     markup.button(text="💰 Notcoinni yechib olish", callback_data=f"withdraw:{user_id}")
      return markup.as_markup()
